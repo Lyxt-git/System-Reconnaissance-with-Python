@@ -1,15 +1,40 @@
-JPN Reconnaisance [Version 1.00]
-(c) IT Analyst. All rights reserved.
+# JPN Reconnaissance Tool [Version 1.00]
 
-Manual are simple. Just follow the prompt and you'll understand the usage. This help on auditing while performing mass Preventive Maintenance, such as L1 Operation.
-Due to mass event of PM, Minimizing manpower to perform this task are crucial, time saver and cost-effective. You may get the idea to manage all your asset on each quarter.
-Add, Delete, Storing and De-duplicating by prompting asset Serial Number is good idea, you also can implement an idea to retrieve Windows Key with SLMGR. All function running in PS and CMD.
+**JPN Reconnaissance Tool** is a command-line application designed for IT analysts to collect and manage computer system information. This tool allows users to gather and save important details about the computer's hardware and network settings to a CSV file. It also provides options to delete data, remove duplicate entries, and handle system data efficiently.
 
-Once you entered the details, and the automation does it works, the CSV will be newly created(if there's is non), the CSV will contain the details, and you may forward the CSV to your SQL, but you need to modify or add the function.
-Let me know if the idea behind this is worth in MDM / RMM Technologies. Should minimize Paid-License in Asset Management by just using Python.
+---
 
-Note : Script are compiled based on Manual Tag Form which later help IT Support to do Reconnaissance of the system.
-       This is the based script, Using pyinstaller to create an Executable File (.exe), Should aware of some EDR did not allowed this process to be execute.
-       Should turn off your AV for consistency or Code Signing.
+## Features
 
-You may modify this script for your own Reconnaissance Project to help you auditting and determine your IT Infrastructure and save it into CSV for your future reference.
+- **Add Data**: Collects and saves computer details like equipment type (Desktop or Laptop), model, operating system, serial number, KEWPA number, PC name, and IP address to a CSV file.
+- **Delete Data**: Allows the user to delete a row from the CSV file based on the serial number.
+- **Remove Duplicate Serial Numbers**: Identifies and removes duplicate rows based on the serial number field in the CSV file.
+- **Exit**: Exit the program with a countdown timer.
+  
+---
+
+## Installation
+
+Ensure you have Python 3.x installed.
+
+### Required Python Modules
+- `os`
+- `platform`
+- `csv`
+- `subprocess`
+- `socket`
+- `time`
+- `msvcrt` (Only for Windows)
+
+---
+
+## Usage
+
+### Running the Script
+
+1. Clone this repository or download the script.
+2. Open a terminal or command prompt.
+3. Run the script using Python:
+
+```bash
+python jpn_reconnaissance.py
